@@ -5,55 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <section>
         <div class="container">
-
-            
-            <h1>Pomodoro</h1>
-            
+            <h1>Pomodoro Timer</h1>
             <div class="timer">
                 <div class="circle">
                     <div class="time">
-                        <p id="minutes"></p>
+                        <p id="minutes">00</p>
                         <p>:</p>
-                        <p id="seconds"></p>
+                        <p id="seconds">00</p>
                     </div>
                 </div>
             </div>
-
-            <div class="painel">
-                <label for="workTimeInput">Work</label>
-                <input type="number" id="workTimeInput" value="25">
-            </div>
-            <div class="painel">
-                <label for="breakTimeInput">Break</label>
-                <input type="number" id="breakTimeInput" value="5">
-            </div>
-
             <div class="controls">
-                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
-                <a id="reset" href="javascript:void(0);"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                <button id="start" onclick="start()">Start</button>
+                <button id="reset" onclick="reset()">Reset</button>
             </div>
         </div>
-
-        <a href="timer.html">Ir al temporizador</a>
-
     </section>
-
-    <!-- SCRIPT -->
     <script src="./script.js"></script>
 </body>
 </html>
