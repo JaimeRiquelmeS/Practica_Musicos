@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Configurar Pomodoro</title>
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,22 +18,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+
     <section>
         <div class="container">
-
-            
-            <h1>Pomodoro</h1>
-            
-            <div class="timer">
-                <div class="circle">
-                    <div class="time">
-                        <p id="minutes"></p>
-                        <p>:</p>
-                        <p id="seconds"></p>
-                    </div>
-                </div>
-            </div>
+            <h1>Configurar Pomodoro</h1>
 
             <div class="painel">
                 <label for="workTimeInput">Work</label>
@@ -43,17 +34,29 @@
                 <input type="number" id="breakTimeInput" value="5">
             </div>
 
-            <div class="controls">
-                <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
-                <a id="reset" href="javascript:void(0);"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+            <div class="painel-btn">
+                <button id="saveSettings"> Guardar</button>
             </div>
         </div>
-
-        <a href="timer.html">Ir al temporizador</a>
-
     </section>
 
-    <!-- SCRIPT -->
-    <script src="./script.js"></script>
+    <script>
+        document.getElementById('saveSettings').onclick = () => {
+            let workTime = document.getElementById('workTimeInput').value;
+            let breakTime = document.getElementById('breakTimeInput').value;
+
+            if (workTime <= 0 || breakTime <= 0) {
+                alert("Los valores deben ser mayores a 0.");
+                return;
+            }
+
+            localStorage.setItem('workTime', workTime);
+            localStorage.setItem('breakTime', breakTime);
+
+            window.location.href = "timer.html";
+        };
+    </script>
+
 </body>
+
 </html>
