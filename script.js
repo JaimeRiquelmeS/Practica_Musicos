@@ -25,12 +25,20 @@ function start() {
         if (seconds === 0) {
             if (currentMinutes === 0) {
                 isWorkTime = !isWorkTime;
+<<<<<<< HEAD
                 currentMinutes = isWorkTime ? workTime : (breakTime - 1); 
                 seconds = 59;
             } else {
                 currentMinutes--;
                 seconds = 59;
             }
+=======
+                currentMinutes = isWorkTime ? workTime : breakTime;
+            } else {
+                currentMinutes--;
+            }
+            seconds = 59;
+>>>>>>> 73761ed05e6bce766fe2441c692a3ec16dce3270
         } else {
             seconds--;
         }
@@ -52,4 +60,8 @@ function reset() {
 startButton.addEventListener("click", start);
 resetButton.addEventListener("click", reset);
 
+<<<<<<< HEAD
 updateDisplay();
+=======
+updateDisplay();
+>>>>>>> 73761ed05e6bce766fe2441c692a3ec16dce3270

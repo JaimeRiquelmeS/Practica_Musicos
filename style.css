@@ -67,6 +67,7 @@ section {
     box-shadow: 0px 0px 15px 10px var(--color-shadow);
 }
 
+<<<<<<< HEAD
 .config {
     color: white; /* Letras blancas */
     font-weight: 800; /* Letras más gruesas */
@@ -85,6 +86,8 @@ section {
 }
 
 
+=======
+>>>>>>> 73761ed05e6bce766fe2441c692a3ec16dce3270
 .painel input[type="number"] {
     width: 6rem; /* Reduce width to make the input boxes smaller */
     padding: 0.2rem; /* Adjust padding to fit inside the circle */
