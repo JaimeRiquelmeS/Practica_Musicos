@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+
+            <div class="timer">
+                <div class="circle">
+                    <div class="time">
+                        <p id="minutes">00</p>
+                        <p>:</p>
+                        <p id="seconds">00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start"><i class="fa-solid fa-play"></i></button>
+                <a id="reset" href="javascript:void(0);"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+            </div>
+        </div>
+        
+
+        <div class="config">
+            <label for="scaleSelect">Selecciona una Escala:</label>
+            <select id="scaleSelect">
+                <option value="mayor7">Escala Mayor 7</option>
+                <option value="menorNatural">Escala Menor Natural</option>
+                <option value="menorArmonica">Escala Menor Armonica</option>
+                <option value="menorMelodica">Escala Menor Melodica</option>
+                <option value="mayorLidia">Escala Mayor Lidia</option>
+                <option value="menorDorica">Escala Menor Dorica</option>
+                <option value="menorFrigia">Escala Menor Frigia</option>
+                <option value="mayorMixolidia">Escala Mayor Mixolidia</option>
+                <option value="locria">Escala Locria</option>
+                <option value="mayorB5">Escala Mayor B5</option>
+            </select>
+        </div>
+
+        <div class="config">
+            <h2 id="chordDisplay"></h2>
+        </div>
+
+        <div class="painel-btn">
+            <button id="startBtn">Iniciar Acordes</button>
+        </div>
+
+        <div class="config"><a href="config.html">Volver a configuración</a></div>
+        
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+    <script src="./chord.js"></script>
+
+</body>
+
+</html>
+
+
